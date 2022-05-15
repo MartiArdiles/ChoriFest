@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Uso de combo";
+}
+
+<div class="row">
+    <select id="autocomplete" class="form-control"></select>
+</div>
+
+<script>
+    $(document).ready(function () {
+        createAutocomplete(
+            'autocomplete', 
+            'ComboComponent/AutocompleteExample', 
+            {});
+    });
+</script>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Uso de ajax";
+}
+
+<div class="row">
+    <input id="txt_ajax" type="text" class="form-control" value="" placeholder="Ingrese un número entero">
+    <br><br>
+    <button type="button" onclick="pressButton()">Enviar Ajax</button>
+</div>
+<script>
+    function pressButton() {
+        let data = {
+            testAjaxModel: {
+                id: $("#txt_ajax").val()
+            }
+        };
+
+        ajax(
+            "post", 
+            "AjaxComponent/AjaxExample", 
+            data, 
+            "Enviando...", 
+            "Espere por favor...", 
+            function(response){
+                if(response.innerObject != null)
+                {
+                    msjSuccess("Exitazo!", JSON.stringify(response.innerObject));
+                }
+                else
+                {
+                    msjInfo("Información", "El controlador no devolvió nada");
+                }
+            }, null);
+    }
+</script>
