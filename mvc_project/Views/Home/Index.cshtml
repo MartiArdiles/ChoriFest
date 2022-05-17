@@ -1,21 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Inicio";
+﻿@model mvc_project.Models.Login.LoginViewModel
+@{
+    Layout = "_LayoutLogin";
 }
 
-<ol>
-    <li>
-        <a href='@Url.Content("~/AjaxComponent/Index")'>Uso de Ajax</a>
-    </li>
-    <li>
-        <a href='@Url.Content("~/ComboComponent/Index")'>Uso de Combo</a>
-    </li>
-    <li>
-        <a href='@Url.Content("~/GridComponent/Index")'>Uso de Grilla</a>
-    </li>
-    <li>
-        <a href='@Url.Content("~/SubmitMethod/Index/12")'>Editar</a>
-    </li>
-    <li>
-        <a href='@Url.Content("~/SubmitMethod/Index/0")'>Nuevo</a>
-    </li>
-</ol>
+@{
+    ViewData["Title"] = "Uso de componentes";
+}
+
+<!--Esto es un comentario-->
+<form action='@Url.Content("~/Home/Login")' method="post">
+    @if(!Model.isLogged)
+    {
+        <span style="color: red">@Model.message</span>
+        <br><br>
+    }
+    <input type="text" value="" name="userName" id="user_name" placeholder="Ingrese su nombre de usuario">
+    <br><br>
+    <input type="password" value="" name="password" id="password" placeholder="Ingrese su contraseña">
+    <br><br>
+    <button type="submit">Ingresar</button>
+</form>
