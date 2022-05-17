@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using mvc_project.Models;
@@ -49,6 +50,10 @@ namespace mvc_project.Controllers
 
                 return View("~/Views/Home/Index.cshtml", loginViewModel);
             }
+
+            HttpContext.Session.Set<LoginModel>(
+                                "UsuarioLogueado",
+                                loginModel);
 
             return Redirect("~/Panel/Index");
         }
