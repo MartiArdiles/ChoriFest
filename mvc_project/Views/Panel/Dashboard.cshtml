@@ -80,9 +80,12 @@
     </div>
 </div>
 <br />
+<a class="btn btn-block alert-info" asp-controller="Product" asp-action="Index" type="button">Ver productos cargados</a>
 <button class="btn btn-block alert-info">Ver Todos los Eventos</button>
+
 <br />
 <br />
+<h3>Lista de Anotados</h3>
 
 <div class="table-responsive table-bordered">
     <table class="table">
@@ -90,22 +93,20 @@
         <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
-            <th scope="col">Detalle</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Eliminar</th>
-
-
+            <th scope="col">Accion</th>
+            
         </tr>
         @foreach (var item in loginModels)
         {
             <tr>                
                 <td>@item.name</td>
                 <td>@item.surname</td>
-
-                <td><button class="btn btn-primary">Detalle</button></td>
-                <td><button class="btn badge-secondary">Editar</button></td>
-                <td><button class="btn btn-warning">Eliminar</button></td>
-                
+                <td>
+                    <a>Ver</a> |
+                <a>Editar</a> |
+                <a>Borrar</a>
+            </td>
+                            
             </tr>
 
         }

@@ -1,0 +1,55 @@
+﻿@using mvc_project.Models.Entities
+
+@{
+    Layout = "_LayoutLogin";
+}
+
+@{
+    ViewData["Title"] = "Product's List";
+    List<Product> products = new List<Product>();
+    Product product = new Product();
+    product.NameProduct = "Criollo";
+    product.Price = 700;
+    products.Add(product);
+}
+
+<h1>Lista de Productos</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Producto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Precio
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in products) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a asp-action="Update" asp-route-id="@item.IdProduct">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProduct">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

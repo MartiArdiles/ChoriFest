@@ -1,0 +1,39 @@
+﻿@model mvc_project.Models.Entities.Product
+@{
+    Layout = "_LayoutLogin";
+}
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1>Editar Producto</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <label asp-for="NameProduct" class="control-label">Nombre</label>
+                <input asp-for="NameProduct" placeholder="Nombre del Producto" class="form-control" />
+                <span asp-validation-for="NameProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Description" class="control-label">Descripción</label>
+                <input asp-for="Description" placeholder="Descripción" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Precio</label>
+                <input type="number" asp-for="Price" placeholder="Precio" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Actualizar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
