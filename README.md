@@ -1,2 +1,2 @@
-# uso_componentes
-Proyecto introductorio al uso de los componentes más comunes
+# Chori-Fest
+Trabajo final de la materia Ingeniería de Software
