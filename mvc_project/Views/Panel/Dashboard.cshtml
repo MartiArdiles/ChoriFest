@@ -1,0 +1,120 @@
+﻿@using mvc_project.Models.Login
+@{
+    Layout = "_LayoutLogin";
+    ViewData["Title"] = "Inicio";
+    LoginModel login = new LoginModel();
+    List<LoginModel> loginModels = new List<LoginModel>();
+    loginModels = login.CargarPersonasLogin(10);
+
+    
+}
+
+<h2 class="text-center">Dashboard</h2>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #FFEC84">
+            <div class="card-header">
+                <h2 class="text-center">Titulo ChoriFest</h2>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Estado:</li>
+
+                <li class="list-group-item">Fecha:</li>
+                <li class="list-group-item">Cierre Inscripción</li>
+                <li class="list-group-item">Lugar</li>
+                <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Menu</li>
+            </ul>
+            <div class="card-body mx-auto">
+                <button type="button" class="btn btn-primary">Inscriptos</button>
+                <button type="button" class="btn btn-info">Detalles</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #FFEC84">
+            <div class="card-header">
+                <h2 class="text-center">Titulo ChoriFest</h2>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Estado:</li>
+
+                <li class="list-group-item">Fecha:</li>
+                <li class="list-group-item">Cierre Inscripción</li>
+                <li class="list-group-item">Lugar</li>
+                <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Menu</li>
+            </ul>
+            <div class="card-body mx-auto">
+                <button type="button" class="btn btn-primary">Inscriptos</button>
+                <button type="button" class="btn btn-info">Detalles</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="background-color: #FFEC84">
+            <div class="card-header">
+                <h2 class="text-center">Titulo ChoriFest</h2>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Estado:</li>
+
+                <li class="list-group-item">Fecha:</li>
+                <li class="list-group-item">Cierre Inscripción</li>
+                <li class="list-group-item">Lugar</li>
+                <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Menu</li>
+            </ul>
+            <div class="card-body mx-auto">
+               <button type="button" class="btn btn-primary">Inscriptos</button>
+                <button type="button" class="btn btn-info">Detalles</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<br />
+<button class="btn btn-block alert-info">Ver Todos los Eventos</button>
+<br />
+<br />
+
+<div class="table-responsive table-bordered">
+    <table class="table">
+
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+
+
+        </tr>
+        @foreach (var item in loginModels)
+        {
+            <tr>                
+                <td>@item.name</td>
+                <td>@item.surname</td>
+
+                <td><button class="btn btn-primary">Detalle</button></td>
+                <td><button class="btn badge-secondary">Editar</button></td>
+                <td><button class="btn btn-warning">Eliminar</button></td>
+                
+            </tr>
+
+        }
+    </table>
+</div>
+<br />
+<br />
+
+
+
+
+

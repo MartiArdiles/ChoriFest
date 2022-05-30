@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,23 +12,37 @@ namespace mvc_project.Controllers
     public class PanelController : Controller
     {
         private readonly ILogger<PanelController> _logger;
+       
 
         public PanelController(ILogger<PanelController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    LoginModel loginModel = HttpContext.Session.Get<LoginModel>(
+        //                        "UsuarioLogueado");
+
+        //    if(loginModel == null)
+        //    {
+        //        return Redirect("~/Home/Index");
+        //    }
+
+        //    return View();
+        //}
+        public IActionResult Dashboard()
         {
             LoginModel loginModel = HttpContext.Session.Get<LoginModel>(
                                 "UsuarioLogueado");
 
-            if(loginModel == null)
+            if (loginModel == null)
             {
                 return Redirect("~/Home/Index");
             }
 
             return View();
         }
+       
     }
 }

@@ -52,10 +52,10 @@ namespace mvc_project.Controllers
             }
 
             HttpContext.Session.Set<LoginModel>(
-                                "UsuarioLogueado",
-                                loginModel);
+                               "UsuarioLogueado",
+                               loginModel);
 
-            return Redirect("~/Panel/Index");
+            return Redirect("~/Panel/Dashboard");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
