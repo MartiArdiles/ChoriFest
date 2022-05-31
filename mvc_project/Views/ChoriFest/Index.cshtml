@@ -1,0 +1,85 @@
+﻿@using mvc_project.Models.Entities
+
+@{
+    Layout = "_LayoutLogin";
+}
+
+@{
+    ViewData["Title"] = "ChoriFest's List";
+    List<ChoriFest> ListchoriFests = new List<ChoriFest>();
+    ChoriFest choriFest = new ChoriFest();
+    choriFest.NameChoriFest= "Post Examen";
+    choriFest.DateChoriFest = System.Convert.ToDateTime("01/07/2022");
+    choriFest.StateChoriFest= "Abierto";
+    choriFest.MenuChoriFest= "Chorizo Mezcla o Vegano + Bebida";
+    choriFest.RegistrationStart = System.Convert.ToDateTime("20/05/2022");
+    choriFest.RegistrationEnd=System.Convert.ToDateTime("20/06/2022");
+    choriFest.QuantityAssist = 10;
+    ListchoriFests.Add(choriFest);
+}   
+
+<h1>Lista de Eventos</h1>
+
+<p>
+    <a asp-action="Create">Nuevo ChoriFest</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Título
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Inicio Inscripción
+            </th>
+            <th>
+                Fin Inscripción
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Inscriptos
+            </th>
+             <th>
+                Costo Parcial
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in ListchoriFests) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameChoriFest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateChoriFest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationStart)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.RegistrationEnd)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.StateChoriFest)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.QuantityAssist)
+            </td>
+             <td>
+                
+            </td>
+            <td>
+                <a asp-action="Update" asp-route-id="@item.IdChoriFest">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdChoriFest">Borrar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdChoriFest">Detalles</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

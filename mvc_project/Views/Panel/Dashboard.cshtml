@@ -8,8 +8,23 @@
 
     
 }
+<input type="search" placeholder="Buscar Evento"/>
+<button class="btn-info">Buscar</button>
 
-<h2 class="text-center">Dashboard</h2>
+<div class="container" style="height:10%">
+                    <br />
+                    <center>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary">Pendiente</button>
+                            <button type="button" class="btn btn-outline-danger">Finalizado</button>
+                            <button type="button" class="btn btn-outline-warning">Abierto</button>
+                            
+                        </div>
+                    </center>
+
+                </div>
+
+<br />
 <div class="row">
     <div class="col-sm-4">
         <div class="card" style="background-color: #FFEC84">
@@ -24,6 +39,7 @@
                 <li class="list-group-item">Cierre Inscripción</li>
                 <li class="list-group-item">Lugar</li>
                 <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Costo Estimado</li>
                 <li class="list-group-item">Menu</li>
             </ul>
             <div class="card-body mx-auto">
@@ -46,6 +62,7 @@
                 <li class="list-group-item">Cierre Inscripción</li>
                 <li class="list-group-item">Lugar</li>
                 <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Costo Estimado</li>
                 <li class="list-group-item">Menu</li>
             </ul>
             <div class="card-body mx-auto">
@@ -68,6 +85,7 @@
                 <li class="list-group-item">Cierre Inscripción</li>
                 <li class="list-group-item">Lugar</li>
                 <li class="list-group-item">Cantidad Parcial</li>
+                <li class="list-group-item">Costo Estimado</li>
                 <li class="list-group-item">Menu</li>
             </ul>
             <div class="card-body mx-auto">
@@ -81,7 +99,7 @@
 </div>
 <br />
 <a class="btn btn-block alert-info" asp-controller="Product" asp-action="Index" type="button">Ver productos cargados</a>
-<button class="btn btn-block alert-info">Ver Todos los Eventos</button>
+<a class="btn btn-block alert-info" asp-controller="ChoriFest" asp-action="Index" type="button">Ver Todos los Eventos</a>
 
 <br />
 <br />
@@ -102,7 +120,7 @@
                 <td>@item.name</td>
                 <td>@item.surname</td>
                 <td>
-                    <a>Ver</a> |
+                <a>Ver Inscripción</a> |
                 <a>Editar</a> |
                 <a>Borrar</a>
             </td>
