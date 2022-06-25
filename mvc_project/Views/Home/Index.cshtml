@@ -1,22 +1,94 @@
-﻿@model mvc_project.Models.Login.LoginViewModel
+﻿@*@model mvc_project.Models.Login.LoginViewModel*@
 @{
     Layout = "_LayoutLogin";
 }
 
 @{
-    ViewData["Title"] = "Uso de componentes";
+    ViewData["Title"] = "ChoriFest";
 }
+<div>
 
-<!--Esto es un comentario-->
-<form action='@Url.Content("~/Home/Login")' method="post">
-    @if(!Model.isLogged)
-    {
-        <span style="color: red">@Model.message</span>
-        <br><br>
-    }
-    <input type="text" value="" name="userName" id="user_name" placeholder="Ingrese su nombre de usuario">
-    <br><br>
-    <input type="password" value="" name="password" id="password" placeholder="Ingrese su contraseña">
-    <br><br>
-    <button type="submit">Ingresar</button>
-</form>
+</div>
+
+<div style="width:80%; color:blueviolet;height:400px" >
+  
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner" style="height:400px">
+    <div class="carousel-item active">
+      <img class="img-fluid" style="width: 100%" src="https://www.laylita.com/recetas/wp-content/uploads/Receta-del-choripan.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" style="width: 100%" src="https://comidaschilenas.com/wp-content/uploads/2019/11/Receta-de-choripan-chileno.jpg" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" style="width: 100%" src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/VJKZQ3F7IZA2TLCZPMK245M3VE.jpg" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+    <!-- Carousel -->
+@*<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.laylita.com/recetas/wp-content/uploads/Receta-del-choripan.jpg" alt="ChoriFest 1" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://comidaschilenas.com/wp-content/uploads/2019/11/Receta-de-choripan-chileno.jpg" alt="ChoriFest 2" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/VJKZQ3F7IZA2TLCZPMK245M3VE.jpg" alt="ChoriFest 3" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+*@
+
+</div>
+
+
+

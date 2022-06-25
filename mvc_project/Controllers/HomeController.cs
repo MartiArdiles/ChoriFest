@@ -18,37 +18,71 @@ namespace mvc_project.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+        public IActionResult LoginAdmin()
+        {
             LoginViewModel loginViewModel =
                 new LoginViewModel
-            {
-                isLogged = true,
-                message = ""
-            };
+                {
+                    isLogged = true,
+                    message = ""
+                };
 
             return View(loginViewModel);
         }
+
+        //public IActionResult Login(LoginModel loginModel)
+        //{
+        //    LoginViewModel loginViewModel =
+        //        new LoginViewModel();
+
+        //    if(string.IsNullOrEmpty(loginModel.userName) ||
+        //        string.IsNullOrEmpty(loginModel.password))
+        //    {
+        //        loginViewModel.isLogged = false;
+        //        loginViewModel.message = "Debe ingresar un nombre de usuario o password";
+
+        //        return View("~/Views/Home/Index.cshtml", loginViewModel);
+        //    }
+            
+        //    if(!loginModel.userName.Equals("Admin") ||
+        //        !loginModel.password.Equals("Admin"))
+        //    {
+        //        loginViewModel.isLogged = false;
+        //        loginViewModel.message = "Nombre de usuario o contraseña incorrecto";
+
+        //        return View("~/Views/Home/Index.cshtml", loginViewModel);
+        //    }
+
+        //    HttpContext.Session.Set<LoginModel>(
+        //                       "UsuarioLogueado",
+        //                       loginModel);
+
+        //    return Redirect("~/Panel/Dashboard");
+        //}
 
         public IActionResult Login(LoginModel loginModel)
         {
             LoginViewModel loginViewModel =
                 new LoginViewModel();
 
-            if(string.IsNullOrEmpty(loginModel.userName) ||
+            if (string.IsNullOrEmpty(loginModel.userName) ||
                 string.IsNullOrEmpty(loginModel.password))
             {
                 loginViewModel.isLogged = false;
                 loginViewModel.message = "Debe ingresar un nombre de usuario o password";
 
-                return View("~/Views/Home/Index.cshtml", loginViewModel);
+                return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
             }
-            
-            if(!loginModel.userName.Equals("Admin") ||
+
+            if (!loginModel.userName.Equals("Admin") ||
                 !loginModel.password.Equals("Admin"))
             {
                 loginViewModel.isLogged = false;
                 loginViewModel.message = "Nombre de usuario o contraseña incorrecto";
 
-                return View("~/Views/Home/Index.cshtml", loginViewModel);
+                return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
             }
 
             HttpContext.Session.Set<LoginModel>(
@@ -57,6 +91,7 @@ namespace mvc_project.Controllers
 
             return Redirect("~/Panel/Dashboard");
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,0 +1,22 @@
+﻿@model mvc_project.Models.Login.LoginViewModel
+@{
+    Layout = "_LayoutLogin";
+}
+
+@{
+    ViewData["Title"] = "ChoriFest";
+}
+
+<!--Esto es un comentario-->
+<form action='@Url.Content("~/Home/Login")' method="post">
+    @if(!Model.isLogged)
+    {
+        <span style="color: red">@Model.message</span>
+        <br><br>
+    }
+    <input type="text" value="" name="userName" id="user_name" placeholder="Ingrese su nombre de usuario">
+    <br><br>
+    <input type="password" value="" name="password" id="password" placeholder="Ingrese su contraseña">
+    <br><br>
+    <button type="submit">Ingresar</button>
+</form>
