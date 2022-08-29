@@ -4,4 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\services_library\services_library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="Domain\Interfaces\" />
+    <Folder Include="Services\ChoriFestService\" />
+  </ItemGroup>
+
 </Project>

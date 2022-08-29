@@ -20,7 +20,7 @@ namespace mvc_project.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            return Redirect("~/Home/Index");
         }
 
 

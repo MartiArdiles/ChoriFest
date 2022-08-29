@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\ChoriFest\" />
+    <Folder Include="DTOs\Products\" />
+    <Folder Include="DTOs\System\Assist\" />
+    <Folder Include="DTOs\System\Rol\" />
+    <Folder Include="DTOs\System\User\" />
+    <Folder Include="Interfaces\ChoriFest\ChoriFest\" />
+    <Folder Include="Interfaces\ChoriFest\Menu\" />
+    <Folder Include="Interfaces\ChoriFest\StatesChoriFest\" />
+    <Folder Include="Interfaces\Products\" />
+    <Folder Include="Interfaces\System\Assist\" />
+    <Folder Include="Interfaces\System\Rol\" />
+    <Folder Include="Interfaces\System\User\" />
+  </ItemGroup>
+
+</Project>

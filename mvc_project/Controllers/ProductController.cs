@@ -15,17 +15,23 @@ namespace mvc_project.Controllers
         public ActionResult Create()
         {
             return View();
+            //return Redirect("~/Panel/Dashboard");
         }
 
         
 
-        // GET: ProductController/Edit/5
         public ActionResult Update(int id)
         {
             return View();
         }
         public ActionResult Delete(int id)
         {
+            return Redirect("~/Panel/Dashboard");
+        }
+
+        public ActionResult AddProduct()
+        {
+
             return Redirect("~/Panel/Dashboard");
         }
 
