@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\entity_library\entity_library.csproj" />
     <ProjectReference Include="..\services_library\services_library.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Repositories\" />
-    <Folder Include="Domain\Interfaces\" />
     <Folder Include="Services\ChoriFestService\" />
   </ItemGroup>
 
