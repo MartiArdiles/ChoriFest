@@ -13,5 +13,6 @@ namespace entity_library.System.User
         public string Surname { get; set; }
         public string Email { get; set; }
         public Rol.Rol Rol { get; set; }
+        public string Password { get; set; }
     }
 }

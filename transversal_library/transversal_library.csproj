@@ -16,7 +16,6 @@
     <Folder Include="Interfaces\Products\" />
     <Folder Include="Interfaces\System\Assist\" />
     <Folder Include="Interfaces\System\Rol\" />
-    <Folder Include="Interfaces\System\User\" />
   </ItemGroup>
 
 </Project>

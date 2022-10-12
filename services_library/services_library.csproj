@@ -15,7 +15,6 @@
     <Folder Include="Products\" />
     <Folder Include="System\Assist\" />
     <Folder Include="System\Rol\" />
-    <Folder Include="System\User\" />
   </ItemGroup>
 
 </Project>

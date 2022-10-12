@@ -16,6 +16,7 @@ namespace mvc_project
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            entity_library.Shared.Configuration.Instance.DefaultStringConnection = configuration.GetConnectionString("DefaultConnection");
         }
 
         public IConfiguration Configuration { get; }
@@ -32,6 +33,7 @@ namespace mvc_project
             });
 
             services.AddControllersWithViews();
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvc_project", "mvc_project\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "services_library", "services_library\services_library.csproj", "{9923E5C0-2DB3-48A5-AA9C-0895B66573C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entity_library", "entity_library\entity_library.csproj", "{87853B57-0752-43EF-A8EC-5438AD4EAAF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "entity_library", "entity_library\entity_library.csproj", "{87853B57-0752-43EF-A8EC-5438AD4EAAF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "transversal_library", "transversal_library\transversal_library.csproj", "{B929C7E0-9D31-44D6-8E54-B76109E4170B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "transversal_library", "transversal_library\transversal_library.csproj", "{B929C7E0-9D31-44D6-8E54-B76109E4170B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOLibrary", "DAOLibrary\DAOLibrary.csproj", "{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,18 @@ Global
 		{B929C7E0-9D31-44D6-8E54-B76109E4170B}.Release|x64.Build.0 = Release|Any CPU
 		{B929C7E0-9D31-44D6-8E54-B76109E4170B}.Release|x86.ActiveCfg = Release|Any CPU
 		{B929C7E0-9D31-44D6-8E54-B76109E4170B}.Release|x86.Build.0 = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|x64.Build.0 = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|x64.Build.0 = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{3EC4EFA3-DC08-4ABC-AFEC-4D1F6F9A07EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

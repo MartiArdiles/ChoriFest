@@ -4,16 +4,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using mvc_project.Models;
 using mvc_project.Models.Login;
+using services_library.System.User;
+using transversal_library.Interfaces.System.User;
 
 namespace mvc_project.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IUserService userService= new UserService();
+
+
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            
         }
 
         public IActionResult Index()
@@ -75,6 +81,8 @@ namespace mvc_project.Controllers
 
                 return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
             }
+
+            var login = userService.GetUser(loginModel.name, loginModel.password);
 
             if (!loginModel.userName.Equals("Admin") ||
                 !loginModel.password.Equals("Admin"))
