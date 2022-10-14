@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAOLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,12 @@ namespace services_library.System.User
 {
     public class UserService: IUserService
     {
-        var userDAO = new DAOFActory();
+
+        DAOFactory userDAO = new DAOFactory();
         public bool GetUser(string userName, string password)
         {
+            return userDAO.DAOUsuario.GetUser(userName, password);
 
-            return true;
 
         }
     }

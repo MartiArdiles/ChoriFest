@@ -27,7 +27,7 @@ namespace DAOLibrary.System.Assist
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("DAOlibrary.System.Assist.DAOUser.GetUser(long id): Error al obtener el item con id = " + id.ToString(), ex);
+				throw new Exception("DAOlibrary.System.Assist.DAOUser.GetUser(long id): Error al obtener el item con id = " , ex);
 			}
 		}
 	}
