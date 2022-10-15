@@ -38,35 +38,6 @@ namespace mvc_project.Controllers
             return View(loginViewModel);
         }
 
-        //public IActionResult Login(LoginModel loginModel)
-        //{
-        //    LoginViewModel loginViewModel =
-        //        new LoginViewModel();
-
-        //    if(string.IsNullOrEmpty(loginModel.userName) ||
-        //        string.IsNullOrEmpty(loginModel.password))
-        //    {
-        //        loginViewModel.isLogged = false;
-        //        loginViewModel.message = "Debe ingresar un nombre de usuario o password";
-
-        //        return View("~/Views/Home/Index.cshtml", loginViewModel);
-        //    }
-            
-        //    if(!loginModel.userName.Equals("Admin") ||
-        //        !loginModel.password.Equals("Admin"))
-        //    {
-        //        loginViewModel.isLogged = false;
-        //        loginViewModel.message = "Nombre de usuario o contraseña incorrecto";
-
-        //        return View("~/Views/Home/Index.cshtml", loginViewModel);
-        //    }
-
-        //    HttpContext.Session.Set<LoginModel>(
-        //                       "UsuarioLogueado",
-        //                       loginModel);
-
-        //    return Redirect("~/Panel/Dashboard");
-        //}
 
         public IActionResult Login(LoginModel loginModel)
         {
@@ -81,23 +52,32 @@ namespace mvc_project.Controllers
 
                 return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
             }
-
-            var login = userService.GetUser(loginModel.name, loginModel.password);
-
-            if (!loginModel.userName.Equals("Admin") ||
-                !loginModel.password.Equals("Admin"))
+            else
             {
-                loginViewModel.isLogged = false;
-                loginViewModel.message = "Nombre de usuario o contraseña incorrecto";
-
-                return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
-            }
-
-            HttpContext.Session.Set<LoginModel>(
+                var login = userService.GetUser(loginModel.userName, loginModel.password);
+                if (login)
+                {
+                    HttpContext.Session.Set<LoginModel>(
                                "UsuarioLogueado",
                                loginModel);
 
-            return Redirect("~/Panel/Dashboard");
+                    return Redirect("~/Panel/Dashboard");
+
+
+                }
+                else
+                {
+                    loginViewModel.isLogged = false;
+                    loginViewModel.message = "Nombre de usuario o contraseña incorrecto";
+
+                    return View("~/Views/Home/LoginAdmin.cshtml", loginViewModel);
+
+                }
+
+            }
+
+            
+            
         }
 
 

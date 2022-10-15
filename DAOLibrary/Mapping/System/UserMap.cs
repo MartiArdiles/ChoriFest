@@ -27,8 +27,7 @@ namespace DAOLibrary.Mapping.System
 				.Column("Password");
 			Map(x => x.Email)
 				.Column("Email");
-			//Map(x => x.Rol)
-			//	.Column("Rol");
+			References(x => x.IdRol, "IdRol");
 		}
 	}
 }

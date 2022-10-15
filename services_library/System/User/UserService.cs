@@ -11,12 +11,18 @@ namespace services_library.System.User
     public class UserService: IUserService
     {
 
-        DAOFactory userDAO = new DAOFactory();
+
+
         public bool GetUser(string userName, string password)
         {
-            return userDAO.DAOUsuario.GetUser(userName, password);
+            using (DAOFactory df = new DAOFactory())
+            {
+                return df.DAOUsuario.GetUser(userName, password);
 
-
+            }
+            
         }
+
+
     }
 }

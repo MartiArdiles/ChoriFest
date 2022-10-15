@@ -8,5 +8,7 @@ namespace entity_library.System.Rol
 {
     public class Rol
     {
+        public virtual int IdRol { get; set; }
+        public virtual string Description { get; set; }
     }
 }

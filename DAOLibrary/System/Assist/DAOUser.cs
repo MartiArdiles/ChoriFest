@@ -20,9 +20,9 @@ namespace DAOLibrary.System.Assist
 		{
 			try
 			{
-				var exist = session.QueryOver<User>().Where(x => x.Name == userName).List();
+				var User = session.QueryOver<User>().Where(x => x.Name == userName && x.Password==password).SingleOrDefault<User>();
 
-				return exist != null ? true : false;
+				return User != null ? true : false;
 				
 			}
 			catch (Exception ex)

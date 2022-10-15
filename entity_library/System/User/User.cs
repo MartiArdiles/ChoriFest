@@ -12,7 +12,7 @@ namespace entity_library.System.User
         public virtual string Name { get; set; }
         public virtual string Surname { get; set; }
         public virtual string Email { get; set; }
-        //public Rol.Rol Rol { get; set; }
+        public virtual Rol.Rol IdRol { get; set; }
         public virtual string Password { get; set; }
     }
 }
