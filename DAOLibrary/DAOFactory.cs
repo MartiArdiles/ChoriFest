@@ -1,4 +1,5 @@
 ﻿using System;
+using DAOLibrary.Fest;
 using DAOLibrary.System.Assist;
 using NHibernate;
 
@@ -112,6 +113,19 @@ namespace DAOLibrary
                 return DaoUser;
             }
         }
-        #endregion
-    }
+		private DAOChorifest DaoChorifest = null;
+		public DAOChorifest DAOChorifest
+		{
+			get
+			{
+				if (this.DaoChorifest == null)
+				{
+					this.DaoChorifest = new DAOChorifest(this.session);
+				}
+
+				return DaoChorifest;
+			}
+		}
+		#endregion
+	}
 }

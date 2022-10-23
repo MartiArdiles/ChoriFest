@@ -1,5 +1,46 @@
-﻿
+﻿@using mvc_project.Models.Fest
+@model ChorifestViewModel;
 
 @{
     Layout = "_LayoutLogin";
 }
+
+<form >
+    <div class="form-group">
+    <label asp-for="Title" class="control-label">Título del evento</label>
+    <input asp-for="Title" placeholder="Título" class="form-control">
+  </div>
+
+  <div class="form-group">
+   <label asp-for="Description" class="control-label">Descripción del Evento</label>
+    <input asp-for="Description" placeholder="Descripción" class="form-control">
+  </div>
+  <div class="form-group">
+    
+    <label asp-for="Date" class="control-label">Fecha Evento</label>
+    <input asp-for="Date" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label asp-for="RegistrationStart" class="control-label">Inicio de Inscripción</label>
+    <input asp-for="RegistrationStart" class="form-control" >
+  </div>
+
+  <div class="form-group">
+    <label asp-for="RegistrationEnd" class="control-label">Fin de Inscripción</label>
+    <input asp-for="RegistrationEnd" class="form-control" >
+  </div>
+
+  <div class="form-group">
+   <div class="form-check">
+  <input class="form-check-input" type="radio" >
+  <label class="form-check-label" for="flexRadioDefault1">
+    Default radio
+  </label>
+</div>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary" asp-controller="ChoriFest" asp-action="Save">Guardar</button>
+  <button type="button" class="btn btn-warning">Volver</button>
+</form>

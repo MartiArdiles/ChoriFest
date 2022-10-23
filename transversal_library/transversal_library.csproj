@@ -5,17 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\ChoriFest\" />
     <Folder Include="DTOs\Products\" />
-    <Folder Include="DTOs\System\Assist\" />
     <Folder Include="DTOs\System\Rol\" />
     <Folder Include="DTOs\System\User\" />
-    <Folder Include="Interfaces\ChoriFest\ChoriFest\" />
-    <Folder Include="Interfaces\ChoriFest\Menu\" />
-    <Folder Include="Interfaces\ChoriFest\StatesChoriFest\" />
+    <Folder Include="Interfaces\Fest\Menu\" />
+    <Folder Include="Interfaces\Fest\StatesChoriFest\" />
     <Folder Include="Interfaces\Products\" />
     <Folder Include="Interfaces\System\Assist\" />
     <Folder Include="Interfaces\System\Rol\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\entity_library\entity_library.csproj" />
   </ItemGroup>
 
 </Project>

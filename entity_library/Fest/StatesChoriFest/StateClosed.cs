@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_library.Products
+namespace entity_library.Fest.StatesChoriFest
 {
-    public class Food: Product
+    public class StateClosed
     {
-        
     }
 }

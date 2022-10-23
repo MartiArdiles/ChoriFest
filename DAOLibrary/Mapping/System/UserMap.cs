@@ -12,9 +12,9 @@ namespace DAOLibrary.Mapping.System
     {
 		public UserMap()
 		{
-			Table("User");
+			Table("user");
 			Id(x => x.Id)
-				.Column("IdUser")
+				.Column("id")
 				.GeneratedBy.Increment();
 
 			Map(x => x.Name)
@@ -27,7 +27,9 @@ namespace DAOLibrary.Mapping.System
 				.Column("Password");
 			Map(x => x.Email)
 				.Column("Email");
-			References(x => x.IdRol, "IdRol");
+			Map(x => x.IdRol)
+				.Column("Rol");
+			References(x => x.IdRol, "Rol");
 		}
 	}
 }

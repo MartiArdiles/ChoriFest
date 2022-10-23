@@ -30,5 +30,16 @@ namespace DAOLibrary.System.Assist
 				throw new Exception("DAOlibrary.System.Assist.DAOUser.GetUser(long id): Error al obtener el item con id = " , ex);
 			}
 		}
+		public void SaveUser(User item)
+		{
+			try
+			{
+				this.session.Save(item);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("dao_library.System.DAOUser.Save: Error al guardar el item.", ex);
+			}
+		}
 	}
 }

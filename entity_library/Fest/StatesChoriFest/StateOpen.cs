@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_library.ChoriFest.StatesChoriFest
+namespace entity_library.Fest.StatesChoriFest
 {
     public class StateOpen
     {

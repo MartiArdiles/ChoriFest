@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using entity_library.Fest;
 
 namespace entity_library.System.Assist
 {
     public class AssistChoriFest
     {
-        public int IdChoriFest { get; set; }
-        public int IdAssist { get; set; }
+        public virtual int Id { get; set; }
+        
+        public virtual Chorifest ChorifestList { get; set; }
+        public virtual Assist AssistList { get; set; }
 
-        public int IdAssistMenu { get; set; }
+        public virtual AssistMenu IdAssistMenu { get; set; }
 
-        public bool Went { get; set; }
-        public bool Payment { get; set; }
+        public virtual bool Went { get; set; }
+        public virtual bool Payment { get; set; }
     }
 }

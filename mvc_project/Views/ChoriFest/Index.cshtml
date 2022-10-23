@@ -1,24 +1,27 @@
-﻿@using entity_library.ChoriFest.ChoriFest
+﻿@using entity_library.Fest
+@model IEnumerable<Chorifest>
 
 
 @{
-    Layout = "_LayoutLogin";
+    Layout = "_Layout";
 }
 
 @{
     ViewData["Title"] = "ChoriFest's List";
-    List<ChoriFest> ListchoriFests = new List<ChoriFest>();
-    ChoriFest choriFest = new ChoriFest();
-    choriFest.Title= "Post Examen";
-    choriFest.Date = System.Convert.ToDateTime("01/07/2022");
-    choriFest.State= "Abierto";
-    choriFest.Menu= "Chorizo Mezcla o Vegano + Bebida";
-    choriFest.RegistrationStart = System.Convert.ToDateTime("20/05/2022");
-    choriFest.RegistrationEnd=System.Convert.ToDateTime("20/06/2022");
+
+    //List<ChoriFest> ListchoriFests = @Model;
+    //List<ChoriFest> ListchoriFests = new List<ChoriFest>();
+    //ChoriFest choriFest = new ChoriFest();
+    //choriFest.Title= "Post Examen";
+    //choriFest.Date = System.Convert.ToDateTime("01/07/2022");
+    //choriFest.State= "Abierto";
+    //choriFest.Menu= "Chorizo Mezcla o Vegano + Bebida";
+    //choriFest.RegistrationStart = System.Convert.ToDateTime("20/05/2022");
+    //choriFest.RegistrationEnd=System.Convert.ToDateTime("20/06/2022");
 
     
     
-    ListchoriFests.Add(choriFest);
+    //ListchoriFests.Add(choriFest);
 }   
 
 <h1>Lista de Eventos</h1>
@@ -27,11 +30,15 @@
     <a asp-action="Create">Nuevo ChoriFest</a>
 </p>
 @*Realizar paginacion, ordenar cada columna, buscar por columna*@
-<table class="table">
+<table class="table"
+    id="grid-chorifestList">
     <thead>
         <tr>
             <th>
                 Título
+            </th>
+            <th>
+                Descripción
             </th>
             <th>
                 Fecha
@@ -55,10 +62,13 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in ListchoriFests) {
+@foreach (var item in @Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
@@ -70,7 +80,7 @@
                 @Html.DisplayFor(modelItem => item.RegistrationEnd)
             </td>
              <td>
-                @Html.DisplayFor(modelItem => item.State)
+                @Html.DisplayFor(modelItem => item.StateChorifest)
             </td>
              <td>
                 

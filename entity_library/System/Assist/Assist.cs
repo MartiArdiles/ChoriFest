@@ -8,9 +8,9 @@ namespace entity_library.System.Assist
 {
     public class Assist
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string Phone { get; set; }
     }
 }

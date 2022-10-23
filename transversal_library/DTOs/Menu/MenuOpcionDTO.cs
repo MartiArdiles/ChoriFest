@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_library.ChoriFest.StatesChoriFest
+namespace transversal_library.DTOs.Menu
 {
-    public class StatePending
+    public class MenuOpcionDTO
     {
     }
 }

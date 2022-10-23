@@ -9,8 +9,4 @@
     <ProjectReference Include="..\services_library\services_library.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\ChoriFestService\" />
-  </ItemGroup>
-
 </Project>

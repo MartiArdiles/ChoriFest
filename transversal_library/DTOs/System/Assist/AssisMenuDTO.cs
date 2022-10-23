@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_library.Products
+namespace transversal_library.DTOs.System.Assist
 {
-    public class Food: Product
+    public class AssisMenuDTO
     {
-        
     }
 }
