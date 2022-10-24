@@ -12,10 +12,12 @@ namespace DAOLibrary.Mapping.System
     {
 		public RolMap()
 		{
-			Table("User");
-			Id(x => x.IdRol)
-				.Column("IdRol")
+			Table("rol");
+			Id(x => x.Id)
+				.Column("Id")
 				.GeneratedBy.Increment();
+			Map(x => x.Title)
+				.Column("Title");
 
 			Map(x => x.Description)
 				.Column("Description");

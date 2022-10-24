@@ -18,16 +18,11 @@ namespace DAOLibrary.Mapping.Fest.Assist
                 .Column("Id")
                 .GeneratedBy.Increment();
 
-            Map(x => x.ChorifestList)
-                .Column("ChorifestId");
-            //References(x => x.ChorifestList, "ChorifestId");
+            References(x => x.Chorifest, "ChorifestId");
 
-            Map(x => x.AssistList)
-                .Column("AssistId");
-            References(x => x.AssistList, "AssistId");
-            Map(x => x.IdAssistMenu)
-                .Column("AssistMenuId");
-            References(x => x.IdAssistMenu, "AssistMenuId");
+            References(x => x.Assist, "AssistId");
+            
+            References(x => x.AssistMenu, "AssistMenuId");
             Map(x => x.Went)
                 .Column("went");
             Map(x => x.Payment)

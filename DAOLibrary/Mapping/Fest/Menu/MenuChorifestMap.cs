@@ -17,13 +17,11 @@ namespace DAOLibrary.Mapping.Fest.Menu
                 .Column("Id")
                 .GeneratedBy.Increment();
 
-            Map(x => x.MenuId)
-                .Column("MenuId");
-            References(x => x.MenuId, "MenuId");
+            
+            References(x => x.Menu, "MenuId");
 
-            Map(x => x.ChorifestId)
-                .Column("ChorifestId");
-            References(x => x.ChorifestId, "ChorifestId");
+            
+            References(x => x.Chorifest, "ChorifestId");
 
         }
     }

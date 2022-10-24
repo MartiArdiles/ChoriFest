@@ -16,18 +16,19 @@ namespace DAOLibrary.Mapping.Fest.AssistMenu
 			Id(x => x.Id)
 				.Column("id")
 				.GeneratedBy.Increment();
-						
-			Map(x => x.MenuId)
-				.Column("MenuId");
-			References(x => x.MenuId, "MenuId");
+			
+			References(x => x.Menu, "MenuId");
+
 			Map(x => x.QtyMenu)
 				.Column("QtyMenu");
-			Map(x => x.DrinkId)
-				.Column("DrinkId");
+			
+			References(x => x.Drink, "DrinkId");
+
 			Map(x => x.QtyDrink)
 				.Column("QtyDrink");
-			Map(x => x.ExtraId)
-				.Column("ExtraId");
+
+			
+			References(x => x.Extra, "ExtraId");
 			Map(x => x.QtyExtra)
 				.Column("QtyExtra");
 

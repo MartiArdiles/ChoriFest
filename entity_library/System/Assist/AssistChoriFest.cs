@@ -11,10 +11,10 @@ namespace entity_library.System.Assist
     {
         public virtual int Id { get; set; }
         
-        public virtual Chorifest ChorifestList { get; set; }
-        public virtual Assist AssistList { get; set; }
+        public virtual Chorifest Chorifest { get; set; }
+        public virtual Assist Assist { get; set; }
 
-        public virtual AssistMenu IdAssistMenu { get; set; }
+        public virtual AssistMenu AssistMenu { get; set; }
 
         public virtual bool Went { get; set; }
         public virtual bool Payment { get; set; }

@@ -22,8 +22,7 @@ namespace DAOLibrary.Mapping.Fest
 			Map(x => x.Title)
 				.Column("Title");
 
-			Map(x => x.StateChorifest)
-				.Column("State");
+			
 			References(x => x.StateChorifest, "State");
 
 

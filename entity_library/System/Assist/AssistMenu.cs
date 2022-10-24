@@ -12,11 +12,11 @@ namespace entity_library.System.Assist
     {
         public virtual int Id { get; set; }
 
-        public virtual Menu MenuId { get; set; }
+        public virtual Menu Menu { get; set; }
         public virtual int QtyMenu { get; set; }
-        public virtual Drink DrinkId { get; set; }
+        public virtual Drink Drink { get; set; }
         public virtual int QtyDrink { get; set; }
-        public virtual Extra ExtraId { get; set; }
+        public virtual Extra Extra { get; set; }
         public virtual int QtyExtra { get; set; }
 
     }

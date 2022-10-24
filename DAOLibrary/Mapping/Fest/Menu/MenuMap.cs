@@ -16,8 +16,7 @@ namespace DAOLibrary.Mapping.Fest.Menu
 				.Column("Id")
 				.GeneratedBy.Increment();
 
-			Map(x => x.Food)
-				.Column("FoodId");
+			
 			References(x => x.Food, "FoodId");
 
 		}
