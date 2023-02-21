@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `chorifest` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `chorifest`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: chorifest
@@ -92,6 +90,10 @@ CREATE TABLE `assist-menu` (
   `QtyExtra` int DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `Fk-AssistMenu-Menu_idx` (`MenuId`),
+  KEY `Fk-AssistMenu-Drink_idx` (`DrinkId`),
+  KEY `Fk-AssistMenu-Extra_idx` (`ExtraId`),
+  CONSTRAINT `Fk-AssistMenu-Drink` FOREIGN KEY (`DrinkId`) REFERENCES `drink` (`Id`),
+  CONSTRAINT `Fk-AssistMenu-Extra` FOREIGN KEY (`ExtraId`) REFERENCES `extra` (`Id`),
   CONSTRAINT `Fk-AssistMenu-Menu` FOREIGN KEY (`MenuId`) REFERENCES `menu` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -377,4 +379,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-23 11:48:18
+-- Dump completed on 2022-10-23 21:52:30
