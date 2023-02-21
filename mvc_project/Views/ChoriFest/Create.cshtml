@@ -1,20 +1,24 @@
-﻿@using mvc_project.Models.Fest
-@model ChorifestViewModel;
+﻿@using entity_library.Fest.Menu
+@using mvc_project.Models.Fest
+@using transversal_library.DTOs.Fest
+@model ChoriFestDTO;
 
 @{
     Layout = "_LayoutLogin";
+
+    
 }
 
 <form >
     <div class="form-group">
     <label asp-for="Title" class="control-label">Título del evento</label>
     <input asp-for="Title" placeholder="Título" class="form-control">
-  </div>
+     </div>
 
-  <div class="form-group">
-   <label asp-for="Description" class="control-label">Descripción del Evento</label>
-    <input asp-for="Description" placeholder="Descripción" class="form-control">
-  </div>
+     <div class="form-group">
+        <label asp-for="Description" class="control-label">Descripción del Evento</label>
+        <input asp-for="Description" placeholder="Descripción" class="form-control">
+     </div>
   <div class="form-group">
     
     <label asp-for="Date" class="control-label">Fecha Evento</label>
@@ -32,14 +36,14 @@
   </div>
 
   <div class="form-group">
-   <div class="form-check">
-  <input class="form-check-input" type="radio" >
-  <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
-  </label>
-</div>
+      @foreach (var item in Model.menus)
+     {<input asp-for="menus" class="form-check-input" type="radio" value=1>
+      <label class="form-check-label" for="flexRadioDefault1"></label>
+      }
+   </div>
 
-  </div>
+
+ 
 
   <button type="submit" class="btn btn-primary" asp-controller="ChoriFest" asp-action="Save">Guardar</button>
   <button type="button" class="btn btn-warning">Volver</button>

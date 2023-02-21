@@ -18,7 +18,7 @@ namespace DAOLibrary.System.Assist
 			this.session = session;
 		}
 
-		public Assist.DAOAssist ObtenerUsuario(long id)
+		public Assist.DAOAssist GetAssist(int id)
 		{
 			try
 			{
@@ -26,7 +26,7 @@ namespace DAOLibrary.System.Assist
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("dao_library.Sistema.DAOUsuario.ObtenerUsuario(long id): Error al obtener el item con id = " + id.ToString(), ex);
+				throw new Exception("DAOLibrary.Assist.DAOAssist.GetAssist(int id): Error al obtener el item con id = " + id.ToString(), ex);
 			}
 		}
 
@@ -38,7 +38,7 @@ namespace DAOLibrary.System.Assist
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("dao_library.Sistema.DAOUsuario.EliminarUsuario(Usuario usuario): Error al eliminar el usuario", ex);
+				throw new Exception("DAOLibrary.Assist.DAOAssist.EliminarUsuario(Usuario usuario): Error al eliminar el usuario", ex);
 			}
 		}
 
@@ -52,8 +52,8 @@ namespace DAOLibrary.System.Assist
         {
             try
             {
-                ICriteria lista = this.session.CreateCriteria<entity_library.System.Assist.Assist>("Usuario");
-                ICriteria cantidad = this.session.CreateCriteria<entity_library.System.Assist.Assist>("Usuario");
+                ICriteria lista = this.session.CreateCriteria<entity_library.System.Assist.Assist>("Assist");
+                ICriteria cantidad = this.session.CreateCriteria<entity_library.System.Assist.Assist>("Assist");
 
                 DAOLibrary.Utils.UtilidadesNHibernate.AgregarCriteriosDeBusqueda(queryCols, query, lista);
                 DAOLibrary.Utils.UtilidadesNHibernate.AgregarCriteriosDeBusqueda(queryCols, query, cantidad);
@@ -69,7 +69,7 @@ namespace DAOLibrary.System.Assist
             }
             catch (Exception ex)
             {
-                throw new Exception("dao_library.Sistema.DAOUsuario.ObtenerListaUsuario: Error al obtener el listado de items", ex);
+                throw new Exception("DAOLibrary.Assist.DAOAssist.ObtenerListaUsuario: Error al obtener el listado de items", ex);
             }
         }
 
@@ -154,24 +154,24 @@ namespace DAOLibrary.System.Assist
         //		throw new Exception("dao_library.Sistema.DAOUsuario.ObtenerListaUsuario: Error al obtener el listado de items", ex);
         //	}
         //}
-        public User ObtenerUsuario(string userName, string password)
-        {
-            ICriteria lista = this.session.CreateCriteria<entity_library.System.User.User>("Usuario");
+        //public User ObtenerUsuario(string userName, string password)
+        //{
+        //    ICriteria lista = this.session.CreateCriteria<entity_library.System.User.User>("Usuario");
 
-            lista.Add(Restrictions.Eq("User.Name", userName));
-            lista.Add(Restrictions.Eq("User.Password", password));
+        //    lista.Add(Restrictions.Eq("User.Name", userName));
+        //    lista.Add(Restrictions.Eq("User.Password", password));
 
-            IList<entity_library.System.User.User> retorno = lista.List<entity_library.System.User.User>();
+        //    IList<entity_library.System.User.User> retorno = lista.List<entity_library.System.User.User>();
 
-            if (retorno != null && retorno.Count > 0)
-            {
-                return retorno[0];
-            }
+        //    if (retorno != null && retorno.Count > 0)
+        //    {
+        //        return retorno[0];
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
-        public void Guardar(entity_library.System.Assist.Assist item)
+        public void SaveAssist(entity_library.System.Assist.Assist item)
 		{
 			try
 			{
@@ -179,7 +179,7 @@ namespace DAOLibrary.System.Assist
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("dao_library.Sistema.DAOUsuario.Guardar: Error al guardar el item.", ex);
+				throw new Exception("DAOLibrary.Assist.DAOAssist.Guardar: Error al guardar el item.", ex);
 			}
 		}
 	}

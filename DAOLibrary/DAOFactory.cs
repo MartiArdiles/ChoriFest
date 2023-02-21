@@ -100,30 +100,58 @@ namespace DAOLibrary
         #endregion
 
         #region DAOs: Agregar los DAOs de ustedes
-        private DAOUser DaoUser= null;
+        private DAOUser DaoUserInstance= null;
         public DAOUser DAOUsuario
         {
             get
             {
-                if (this.DaoUser == null)
+                if (this.DaoUserInstance == null)
                 {
-                    this.DaoUser = new DAOUser(this.session);
+                    this.DaoUserInstance = new DAOUser(this.session);
                 }
 
-                return DaoUser;
+                return DaoUserInstance;
             }
         }
-		private DAOChorifest DaoChorifest = null;
+		private DAOChorifest DaoChorifestInstance = null;
 		public DAOChorifest DAOChorifest
 		{
 			get
 			{
-				if (this.DaoChorifest == null)
+				if (this.DaoChorifestInstance == null)
 				{
-					this.DaoChorifest = new DAOChorifest(this.session);
+					this.DaoChorifestInstance = new DAOChorifest(this.session);
 				}
 
-				return DaoChorifest;
+				return DaoChorifestInstance;
+			}
+		}
+
+		private DAOMenu DaoMenuChoriInstance = null;
+		public DAOMenu DaoMenu
+		{
+			get
+			{
+				if (this.DaoMenuChoriInstance == null)
+				{
+					this.DaoMenuChoriInstance = new DAOMenu(this.session);
+				}
+
+				return DaoMenuChoriInstance;
+			}
+		}
+
+		private DAOAssist DaoAssistInstance = null;
+		public DAOAssist DaoAssist
+		{
+			get
+			{
+				if (this.DaoAssistInstance == null)
+				{
+					this.DaoAssistInstance = new DAOAssist(this.session);
+				}
+
+				return DaoAssistInstance;
 			}
 		}
 		#endregion

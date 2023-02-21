@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace transversal_library.DTOs.System.Assist
 {
-    public class AssisMenuDTO
+    public class AssistMenuDTO
     {
     }
 }

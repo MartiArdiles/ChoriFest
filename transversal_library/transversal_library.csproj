@@ -11,7 +11,6 @@
     <Folder Include="Interfaces\Fest\Menu\" />
     <Folder Include="Interfaces\Fest\StatesChoriFest\" />
     <Folder Include="Interfaces\Products\" />
-    <Folder Include="Interfaces\System\Assist\" />
     <Folder Include="Interfaces\System\Rol\" />
   </ItemGroup>
 

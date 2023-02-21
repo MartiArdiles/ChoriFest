@@ -15,32 +15,32 @@ namespace entity_library.Fest
         public virtual string Description { get; set; }
         public virtual DateTime RegistrationStart { get; set; }
         public virtual DateTime RegistrationEnd { get; set; }
-        public virtual State StateChorifest { get; set; }
+        public virtual int StateChorifest { get; set; }
         public virtual int QuantityAssist { get; set; }
-        //public ChoriFest()
+
+        //private Chorifest()
         //{
 
         //}
-
-        //public List<ChoriFest> CreateListChoriFest(int cantidad)
+        //public static Chorifest _chorifest;
+        //public static Chorifest GetChoriFest()
         //{
-
-        //    ChoriFest choriFest = new ChoriFest();
-        //    List<ChoriFest> listChoriFest = new List<ChoriFest>();
-        //    for (int i = 0; i < cantidad; i++)
+        //    if (_chorifest == null)
         //    {
-        //        choriFest.Title = "ChoriFest " + Convert.ToString(i);
-        //        choriFest.Date = Convert.ToDateTime("01/08/2022");
-        //        choriFest.State = "Abierto";
-        //        choriFest.Menu = "Chorizo Mezcla o Vegano + Bebida";
-        //        choriFest.RegistrationStart = Convert.ToDateTime("20/06/2022");
-        //        choriFest.RegistrationEnd = Convert.ToDateTime("20/07/2022");
-        //        listChoriFest.Add(choriFest);
-
+        //        return _chorifest = new Chorifest();
         //    }
-        //    return listChoriFest;
+        //    else
+        //    {
+        //        return _chorifest;
+        //    }
 
         //}
 
+        //private State SetState(int state)
+        //{
+        //    var ChoriState= State.
+        //}
+
+        
     }
 }

@@ -69,25 +69,30 @@ namespace DAOLibrary.Fest
 
 		public async Task<IEnumerable<Chorifest>> GetListChorifest()
         {
-			try
-			{
-				var ChorifestList = await session.QueryOver<Chorifest>().ListAsync<Chorifest>();
+			var ChorifestList = await session.QueryOver<Chorifest>().ListAsync<Chorifest>();
 
-				return ChorifestList;
+			return ChorifestList;
 
-			}
-			catch (Exception ex)
-			{
-				throw new Exception("DAOLibrary.Chorifest.DAOChorifest.GetListChorifest: Error al obtener el listado de Chorifest", ex);
-			}
+			//try
+			//{
+			//	var ChorifestList = await session.QueryOver<Chorifest>().ListAsync<Chorifest>();
+
+			//	return ChorifestList;
+
+			//}
+			//catch (Exception ex)
+			//{
+			//	throw new Exception("DAOLibrary.Chorifest.DAOChorifest.GetListChorifest: Error al obtener el listado de Chorifest", ex);
+			//}
 
 		}
 
-		public void SaveChorifest(Chorifest Chorifest)
+		public async Task SaveChorifest(Chorifest Chorifest)
 		{
 			try
 			{
-				this.session.Save(Chorifest);
+				await this.session.SaveAsync(Chorifest);
+				
 			}
 			catch (Exception ex)
 			{

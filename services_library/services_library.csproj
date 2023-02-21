@@ -13,7 +13,6 @@
     <Folder Include="Fest\Menu\" />
     <Folder Include="Fest\StatesChoriFest\" />
     <Folder Include="Products\" />
-    <Folder Include="System\Assist\" />
     <Folder Include="System\Rol\" />
   </ItemGroup>
 
